@@ -55,5 +55,4 @@ const Pay = ({payHandler,onTransIdchange,onPayMethodChange}) => {
     )
 }
 
-
 export default Pay;

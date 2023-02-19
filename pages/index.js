@@ -59,6 +59,10 @@ export default function Home() {
       method:'POST',
       body: JSON.stringify(info)
     })
+ 
+    const res =  await response.json()
+
+    console.log(res)
   }
 
   return (
