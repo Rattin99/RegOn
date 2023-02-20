@@ -3,6 +3,7 @@ import { useState } from 'react'
 import InfoForm from '../components/InfoForm'
 import Pay from '@/components/Pay'
 import { url } from '@/utils'
+import End from '@/components/End'
 
 export default function Home() {
 
@@ -63,6 +64,9 @@ export default function Home() {
     const res =  await response.json()
 
     console.log(res)
+
+    setPay(false)
+    setEnd(true)
   }
 
   return (
@@ -72,7 +76,7 @@ export default function Home() {
       </div>
       { home &&  <InfoForm  submitHandler= {submitHandler}/>}
       { pay && <Pay payHandler = {payHandler} onPayMethodChange = {onPayMethodChange} onTransIdchange={onTransIdchange} />}
-      {end}
+      {end && <End/>}
     </>
   )
 

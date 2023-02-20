@@ -171,3 +171,15 @@ img{
     font-size: large;
     text-align: center;
 }
+
+
+.end{
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: beige;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+}
