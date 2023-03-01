@@ -1,4 +1,4 @@
-import Pending from "@/components/Pendin";
+import Pending from "@/components/Pending";
 
 
 export const getServerSideProps = async () => {
@@ -20,13 +20,15 @@ export const getServerSideProps = async () => {
 
 const Admin = ({data}) => {
 
-    console.log(data)
+   
+    
     return (
         <>
         <div className="w-full h-full flex flex-col items-center justify-center">
         {
             data.map((value,index) => {
-                return (<Pending name={value.name} phone = {value.phone} timeSent = {value.time_sent} transId = {value.transId} payment = {value.paymethod} key = {index} />)
+                return (<Pending name={value.name} phone = {value.phone} timeSent = {value.time_sent} transId = {value.transId} payment = {value.paymethod}
+                key = {index} email = {value.email} reg = {value.regNo} tshirt ={value.tshirt} dept = {value.dept}/>)
             })
         }
         </div>
