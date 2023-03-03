@@ -1,4 +1,5 @@
 import Pending from "@/components/Pending";
+import Router, { useRouter } from "next/router";
 
 
 export const getServerSideProps = async () => {
@@ -20,7 +21,7 @@ export const getServerSideProps = async () => {
 
 const Admin = ({data}) => {
 
-   
+   const router = useRouter()
     
     return (
         <>
@@ -28,7 +29,7 @@ const Admin = ({data}) => {
         {
             data.map((value,index) => {
                 return (<Pending name={value.name} phone = {value.phone} timeSent = {value.time_sent} transId = {value.transId} payment = {value.paymethod}
-                key = {index} email = {value.email} reg = {value.regNo} tshirt ={value.tshirt} dept = {value.dept}/>)
+                key = {index} email = {value.email} reg = {value.regNo} tshirt ={value.tshirt} dept = {value.dept} router ={router}/>)
             })
         }
         </div>

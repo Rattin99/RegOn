@@ -2,7 +2,7 @@
 
 
 
-const Pending = ({name,phone,timeSent,transId, payment,email,reg,tshirt,dept,}) => {
+const Pending = ({name,phone,timeSent,transId, payment,email,reg,tshirt,dept,router}) => {
 
     const payStyle = (payment) => {
 
@@ -33,6 +33,8 @@ const Pending = ({name,phone,timeSent,transId, payment,email,reg,tshirt,dept,}) 
         const response = await res.json()
 
         console.log(response)
+
+        router.push('/admin')
     }
 
 
