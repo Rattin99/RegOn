@@ -4,7 +4,7 @@ import InfoForm from '../components/InfoForm'
 import Pay from '@/components/Pay'
 import { url } from '@/utils'
 import End from '@/components/End'
-
+import Bal from '../components/Bal'
 export default function Home() {
 
   const [data,setData] = useState({})
@@ -77,6 +77,8 @@ export default function Home() {
       { home &&  <InfoForm  submitHandler= {submitHandler}/>}
       { pay && <Pay payHandler = {payHandler} onPayMethodChange = {onPayMethodChange} onTransIdchange={onTransIdchange} />}
       {end && <End/>}
+
+   
     </>
   )
 
