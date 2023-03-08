@@ -22,10 +22,14 @@ const checking = ({data}) => {
     return (
         
             
-            data.map((value,index) => {
+          <>
+            {
+                data.map((value,index) => {
 
-                return (<p className=" w-full flex items-center justify-evenly bg-white m-2"><span className="bg-white">{value.name}</span> <span className="bg-white">{value.regNo}</span><span className="bg-white w-2">{value.tshirt}</span><span className="bg-white">{value.token}</span></p>)
-            })
+                    return (<p key={index} className=" w-full flex items-center justify-evenly bg-white m-2"><span className="bg-white">{value.name}</span> <span className="bg-white">{value.regNo}</span><span className="bg-white w-2">{value.tshirt}</span><span className="bg-white">{value.token}</span></p>)
+                })
+            }
+          </>
         
     )
 
